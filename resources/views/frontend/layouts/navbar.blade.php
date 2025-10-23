@@ -6,7 +6,7 @@
     <!-- Navigation -->
     <nav class="navbar sticky-header navbar-expand-lg" id="mainNav">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{{ url('/') }}"><img src="{{ getImageFile(get_option('app_logo')) }}" alt="Logo"></a>
+            <a class="navbar-brand" href="{{ url('/') }}">AGLIFT</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">

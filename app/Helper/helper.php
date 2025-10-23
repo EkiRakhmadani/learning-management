@@ -1076,11 +1076,11 @@ if (!function_exists('updateManifest')) {
     function updateManifest()
     {
         $manifest = [
-            "name" => get_option('app_name', 'LMSZAI'),
-            "short_name" => get_option('app_name', 'LMSZAI'),
+            "name" => get_option('app_name', 'LMS'),
+            "short_name" => get_option('app_name', 'LMS'),
             "start_url" => route('main.index'),
             "background_color" => get_option('app_theme_color', '#5e3fd7'),
-            "description" => get_option('app_name', 'LMSZAI'),
+            "description" => get_option('app_name', 'LMS'),
             "display" => "fullscreen",
             "theme_color" => get_option('app_theme_color', '#5e3fd7'),
             "icons" => [

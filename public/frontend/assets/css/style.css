@@ -898,6 +898,25 @@ button:focus {
 /*-------------------------------------------
            4. Navbar Area CSS
 -------------------------------------------*/
+/* --- Gaya untuk Brand "AGLIFT" di Header --- */
+.navbar .navbar-brand {
+    font-size: 32px !important;
+    font-weight: 700 !important;
+    color: var(--white-color, #FFFFFF) !important;
+    text-transform: uppercase;
+    margin-right: 120px !important; 
+    padding: 0 !important;
+    line-height: 0 !important;
+}
+
+.navbar .navbar-brand:hover {
+    color: var(--white-color, #FFFFFF) !important;
+}
+
+/* --- Memastikan item di navbar punya jarak yang pas --- */
+.navbar .header-nav-left-side {
+    align-items: center; /* Membuat search bar dan menu sejajar */
+}
 .menu-section-area {
     padding: 0;
     z-index: 999;
@@ -1624,31 +1643,51 @@ button:focus {
 -------------------------------------------*/
 
 /*-------------------------------------------
-    8. Special Feature Area Start
+    8. Special Feature Area Start (Modernized)
 -------------------------------------------*/
+
+/* Area pembungkus utama */
 .special-feature-area {
     margin-top: -50px;
+    /* perspektif untuk efek hover 3D (opsional) */
+    perspective: 1000px;
 }
+
+/* Kartu fitur tunggal*/
 .single-feature-item {
     background-color: var(--white-color);
-    box-shadow: 0 6px 21px rgba(21, 3, 89, 0.08);
-    border-radius: 3px;
-    padding: 43px 30px;
+    /* 1. Shadow yang lebih halus */
+    box-shadow: 0 4px 15px rgba(21, 3, 89, 0.05), 0 1px 4px rgba(21, 3, 89, 0.07);
+    /* 2. Radius sudut */
+    border-radius: 12px;
+    padding: 40px 30px;
+    /* 3. Transisi halus */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.single-feature-item p {
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 154%;
-    color: var(--gray-color);
-}
-.single-feature-item h6 {
-    padding-bottom: 10px;
-}
-.top-categories-area .feature-img-wrap {
-    height: 60px;
-    width: 60px;
-    background-color: #d5d5d5;
+
+/* Pengaturan untuk wrapper icon */
+.feature-img-wrap {
+    height: 70px; /* Sedikit diperbesar */
+    width: 70px;
     border-radius: 50%;
+    margin: 0 auto 25px auto; /* Otomatis ke tengah dan memberi jarak ke judul */
+    display: flex; /* Menggunakan flexbox untuk memusatkan icon di dalamnya */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Judul (h6) */
+.single-feature-item h6 {
+    font-size: 16px; /* Sedikit diperbesar agar lebih terbaca */
+    margin-bottom: 15px; /* Menggunakan margin untuk jarak, bukan padding */
+    font-weight: 600; /* Sedikit lebih tebal */
+}
+
+/* Paragraf deskripsi */
+.single-feature-item p {
+    font-size: 15px;
+    line-height: 1.6; /* Menggunakan rasio untuk line-height */
+    color: #6c757d; 
 }
 /*-------------------------------------------
     8. Special Feature Area End
@@ -2418,6 +2457,29 @@ button:focus {
 /*-------------------------------------------
     17. Footer Area Start
 -------------------------------------------*/
+/*
+==============================================
+  GAYA UNTUK NAMA BRAND DI FOOTER
+==============================================
+*/
+
+/* --- Gaya Utama untuk Brand "AGLIFT" di Footer --- */
+.footer-brand {
+    font-size: 28px !important;               /* Ukuran disesuaikan agar tidak terlalu besar di footer */
+    font-weight: 700 !important;             /* Teks tebal (bold) */
+    color: var(--white-color, #FFFFFF) !important; /* Warna teks putih */
+    text-transform: uppercase;               /* Semua huruf menjadi kapital */
+    line-height: 1.2 !important;             /* Sedikit ruang antar baris jika nama brand panjang */
+    text-align: left !important;           /* MEMBUAT TEKS DI TENGAH */
+    display: block;                          /* Diperlukan agar text-align berfungsi */
+    margin-bottom: 18px !important;          /* Memberi jarak ke konten di bawahnya */
+}
+
+/* --- Gaya saat cursor diarahkan (hover) --- */
+.footer-brand:hover {
+    color: var(--white-color, #FFFFFF) !important; /* Memastikan warna tetap putih */
+    text-decoration: none !important;        /* Menghilangkan garis bawah saat hover */
+}
 /* Footer Widget */
 .footer-about img,
 .footer-widget > h6 {
