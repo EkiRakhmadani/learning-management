@@ -1,14 +1,34 @@
 @extends('layouts.auth')
 
+{{-- Menambahkan Style khusus untuk logo "Aglift" --}}
+@push('style')
+<style>
+    .aglift-text-logo {
+        font-family: 'Poppins', 'Helvetica Neue', sans-serif;
+        font-size: 32px;    
+        font-weight: 800;      
+        color: #333;           
+        text-decoration: none !important;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    /* Khusus untuk logo di panel kiri (background gelap) */
+    .sign-up-left-content .aglift-text-logo {
+        color: #FFFFFF; /* Warna putih */
+    }
+</style>
+@endpush
 @section('content')
-    <!-- Sing Up Area Start -->
     <section class="sign-up-page p-0">
         <div class="container-fluid p-0">
             <div class="row">
                 <div class="col-md-5">
                     <div class="sign-up-left-content">
                         <div class="sign-up-top-logo">
-                            <a href="{{ route('main.index') }}"><img src="{{getImageFile(get_option('app_logo'))}}" alt="logo"></a>
+                            {{-- KUNCI PERBAIKAN: Logo diganti dengan Teks --}}
+                            <a href="{{ route('main.index') }}" class="aglift-text-logo">Aglift</a>
                         </div>
                         <p>{{ __(get_option('sign_up_left_text')) }}</p>
                         @if(get_option('sign_up_left_image'))
@@ -116,8 +136,7 @@
             </div>
         </div>
     </section>
-    <!-- Sing Up Area End -->
-@endsection
+    @endsection
 
 @push('script')
     <script>
@@ -138,7 +157,7 @@
         });
 
         $('#affiliatorCredentialShow').on('click', function (){
-            $('.email').val('affililator@gmail.com');
+            $('.email').val('affiliator@gmail.com');
             $('.password').val('123456');
         });
 

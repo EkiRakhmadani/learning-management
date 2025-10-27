@@ -898,8 +898,9 @@ button:focus {
 /*-------------------------------------------
            4. Navbar Area CSS
 -------------------------------------------*/
-/* --- Gaya untuk Brand "AGLIFT" di Header --- */
+/* --- Gaya untuk Brand "AGLIFT" di Header utama --- */
 .navbar .navbar-brand {
+    font-family: 'Poppins', sans-serif !important; 
     font-size: 32px !important;
     font-weight: 700 !important;
     color: var(--white-color, #FFFFFF) !important;
@@ -2465,20 +2466,20 @@ button:focus {
 
 /* --- Gaya Utama untuk Brand "AGLIFT" di Footer --- */
 .footer-brand {
-    font-size: 28px !important;               /* Ukuran disesuaikan agar tidak terlalu besar di footer */
-    font-weight: 700 !important;             /* Teks tebal (bold) */
-    color: var(--white-color, #FFFFFF) !important; /* Warna teks putih */
-    text-transform: uppercase;               /* Semua huruf menjadi kapital */
-    line-height: 1.2 !important;             /* Sedikit ruang antar baris jika nama brand panjang */
-    text-align: left !important;           /* MEMBUAT TEKS DI TENGAH */
-    display: block;                          /* Diperlukan agar text-align berfungsi */
-    margin-bottom: 18px !important;          /* Memberi jarak ke konten di bawahnya */
+    font-family: 'Poppins', sans-serif !important; 
+    font-size: 26px !important;          
+    font-weight: 700 !important;            
+    color: var(--white-color, #FFFFFF) !important; 
+    text-transform: uppercase;               
+    line-height: 1.2 !important;             
+    text-align: left !important;       
+    display: block;                         
+    margin-bottom: 18px !important;         
 }
 
 /* --- Gaya saat cursor diarahkan (hover) --- */
 .footer-brand:hover {
     color: var(--white-color, #FFFFFF) !important; /* Memastikan warna tetap putih */
-    text-decoration: none !important;        /* Menghilangkan garis bawah saat hover */
 }
 /* Footer Widget */
 .footer-about img,

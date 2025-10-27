@@ -1,17 +1,23 @@
+<style>
+    .sidebar__brand h3 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        color: #FFFFFF; 
+        letter-spacing: 1.5px;
+        margin: 0;
+    } 
+</style>
+
 <div class="sidebar__area">
     <div class="sidebar__close">
         <button class="close-btn">
             <i class="fa fa-close"></i>
         </button>
     </div>
-
     <div class="sidebar__brand">
         <a href="{{ route('admin.dashboard') }}">
-            @if(get_option('app_logo') != '')
-                <img src="{{getImageFile(get_option('app_logo'))}}" alt="">
-            @else
-                <img src="" alt="">
-            @endif
+            <h3>AGLIFT</h3>
         </a>
     </div>
     <ul id="sidebar-menu" class="sidebar__menu">
@@ -1140,3 +1146,14 @@
         </li>
     </ul>
 </div>
+
+<style>
+    /* Style untuk logo teks di sidebar admin */
+    .sidebar__brand a h3 {
+        color: #FFFFFF; /* Warna teks putih */
+        font-weight: 700;  /* Teks tebal */
+        font-size: 24px;   /* Ukuran teks */
+        margin: 0;         /* Menghapus spasi ekstra*/
+       /* text-align: center; /* Memastikan teks di tengah */
+        }
+</style>
