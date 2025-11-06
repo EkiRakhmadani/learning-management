@@ -1,15 +1,12 @@
 @extends('layouts.auth')
-
 @section('content')
-<!-- Sing Up Area Start -->
 <section class="sign-up-page p-0">
     <div class="container-fluid p-0">
         <div class="row">
             <div class="col-md-5">
                 <div class="sign-up-left-content">
                     <div class="sign-up-top-logo">
-                        <a href="{{ route('main.index') }}"><img src="{{getImageFile(get_option('app_logo'))}}"
-                                alt="logo"></a>
+                        <a href="{{ route('main.index') }}">AGLIFT</a>
                     </div>
                     <p>{{ __(get_option('sign_up_left_text')) }}</p>
                     @if(get_option('sign_up_left_image'))
@@ -123,7 +120,7 @@
                                                 class="color-hover text-decoration-underline">Terms of Use</a> and <a
                                                 href="{{ route('privacy-policy') }}"
                                                 class="color-hover text-decoration-underline">Privacy Policy.</a>
-                                        </label>
+                                        </slabel>
                                     </div>
                                 </div>
                             </div>
@@ -142,5 +139,4 @@
         </div>
     </div>
 </section>
-<!-- Sing Up Area End -->
 @endsection

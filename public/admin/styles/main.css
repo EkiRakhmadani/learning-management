@@ -10957,7 +10957,7 @@ img {
   border-radius: 12px;
 }
 
-#add-todo-modal .modal-header {
+#add-todo-modal .modal-header  { 
   /* border: 0; */
 }
 #add-todo-modal .modal-header {

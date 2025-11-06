@@ -1,14 +1,12 @@
 @extends('layouts.auth')
-
 @section('content')
-    <!-- Sing In Area Start -->
     <section class="sign-up-page p-0">
         <div class="container-fluid p-0">
             <div class="row">
                 <div class="col-md-5">
                     <div class="sign-up-left-content">
                         <div class="sign-up-top-logo">
-                            <a href="{{ route('main.index') }}"><img src="{{getImageFile(get_option('app_logo'))}}" alt="logo"></a>
+                            <a href="{{ route('main.index') }}" class="h3 fw-bold text-dark text-decoration-none">AGLIFT</a>
                         </div>
                         <p>{{ __(get_option('sign_up_left_text')) }}</p>
                         @if(get_option('sign_up_left_image'))
@@ -48,5 +46,4 @@
             </div>
         </div>
     </section>
-    <!-- Sing In Area End -->
-@endsection
+    @endsection
