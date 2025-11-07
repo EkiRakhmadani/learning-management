@@ -1495,15 +1495,65 @@ button:focus {
 /*-------------------------------------------
     7. Header Area
 -------------------------------------------*/
+/* Hero Area Background - */
+.hero-area {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Stars Background */
+.hero-area::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle, white 1px, transparent 1px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.8) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.6) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.9) 1px, transparent 1px);
+    background-size: 80px 80px, 120px 120px, 60px 60px, 140px 140px;
+    background-position: 0 0, 40px 60px, 20px 30px, 70px 90px;
+    opacity: 0.7;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Larger Stars Scattered */
+.hero-area::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle, white 2px, transparent 2px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.9) 1.5px, transparent 1.5px);
+    background-size: 250px 250px, 180px 180px;
+    background-position: 30px 40px, 150px 120px;
+    opacity: 0.6;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-area .gradient-bg {
+    background: transparent !important;
+}
+
 .hero-area .section-overlay {
     min-height: 795px;
     padding: 150px 0;
+    position: relative;
+    z-index: 2;
+    background: transparent !important;
 }
+
 .hero-content {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    z-index: 10;
 }
 
 /* Come for learn */
@@ -1516,7 +1566,7 @@ button:focus {
     color: rgba(255, 255, 255, 0.55);
     border-bottom: 1px solid rgba(255, 255, 255, 0.17);
     width: 59%;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 /* Ellipse 2 */
 .come-for-learn-text span {
@@ -1571,8 +1621,8 @@ button:focus {
     64.999%,
     70%,
     100% {
-        opacity: 0.99;
-        text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.4),
+    opacity: 0.99;
+    text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.4),
             1px -1px 0 rgba(255, 255, 255, 0.4),
             -1px 1px 0 rgba(255, 255, 255, 0.4),
             1px 1px 0 rgba(255, 255, 255, 0.4), 0 -2px 8px, 0 0 2px,
@@ -1584,46 +1634,75 @@ button:focus {
     63.999%,
     65%,
     69.999% {
-        opacity: 0.4;
-        text-shadow: none;
+    opacity: 0.4;
+    text-shadow: none;
     }
 }
 /*Come for learn Text Glow effect*/
 
+/* Hero Heading */
 .hero-heading {
-    font-weight: 300;
-    font-size: 65px;
-    line-height: 100.5%;
-    /* text-transform: capitalize; */
-    color: var(--white-color);
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.1;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
+
 .hero-heading > span {
-    /* text-transform: capitalize!important; */
-    font-weight: 500;
+    font-weight: 700;
 }
+
 .hero-content p {
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 154.5%;
-    color: rgba(255, 255, 255, 0.72);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 520px;
 }
+
 .hero-content p,
 .hero-btns {
-    margin-top: 30px;
+    margin-top: 25px;
 }
+
 .hero-btns .theme-btn {
-    margin-right: 10px;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-weight: 700;
+    border: none;
+}
+
+/* Hero Right Side Image - Seamless Integration */
+.hero-right-side {
+    position: relative;
+    z-index: 10;
+}
+
+.hero-right-side img {
+    filter: drop-shadow(0 10px 30px rgba(195, 155, 155, 0.2));
+    opacity: 1;
+}
+
+/* Decorative Elements */
+.hero-area .container {
+    position: relative;
+    z-index: 3;
 }
 
 /*Hero Heading Text Effect Start*/
 .word {
     position: absolute;
     opacity: 0;
-    /* text-transform: capitalize; */
 }
+
 .main-middle-text {
     margin-right: 15px;
+    color: #ffffff;
+    font-weight: 700;
 }
+
 .letter {
     display: inline-block;
     position: relative;
@@ -1632,19 +1711,21 @@ button:focus {
     transform-origin: 50% 50% 25px;
     text-transform: initial;
 }
+
 .letter.out {
     transform: rotateX(90deg);
     transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
+
 .letter.behind {
     transform: rotateX(-90deg);
 }
+
 .letter.in {
     transform: rotateX(0deg);
     transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 /*Hero Heading Text Effect End*/
-
 /*-------------------------------------------
     7. Header Area End
 -------------------------------------------*/
@@ -2534,7 +2615,7 @@ button:focus {
     font-size: 23px;
     position: relative;
     top: 2px;
-    color: var(--theme-color);
+    color: rgb(255, 73, 73);
 }
 .copyright-wrapper {
     padding: 27px 0;
